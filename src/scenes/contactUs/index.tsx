@@ -25,7 +25,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
   };
 
   return (
-    <section id="contactus" className="mx-auto w-5/6 py-24">
+    <section id="contactus" className="mx-auto w-5/6 py-24 md:py-48">
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
       >
@@ -67,6 +67,13 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               action="#"
               method="POST"
             >
+              {errors.name && (
+                <p className="text-red-500">
+                  {errors.name.type === "required" && "Name is required."}
+                  {errors.name.type === "maxLength" &&
+                    "Max length is 100 characters."}
+                </p>
+              )}
               <input
                 className={inputStyles}
                 type="text"
@@ -76,11 +83,11 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                   maxLength: 100,
                 })}
               />
-              {errors.name && (
-                <p className="mt-1 text-primary-500">
-                  {errors.name.type === "required" && "This field is required."}
-                  {errors.name.type === "maxLength" &&
-                    "Max length is 100 characters."}
+              {errors.email && (
+                <p className="text-red-500">
+                  {errors.email.type === "required" &&
+                    "Email is required."}
+                  {errors.email.type === "pattern" && "Invalid email address."}
                 </p>
               )}
               <input
@@ -92,28 +99,29 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                   pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                 })}
               />
-              {errors.email && (
-                <p className="mt-1 text-primary-500">
-                  {errors.email.type === "required" &&
-                    "This field is required."}
-                  {errors.email.type === "pattern" && "Invalid email address."}
+              {errors.number && (
+                <p className="text-red-500">
+                  {errors.number.type === "required" &&
+                    "Phone number is required."}
+                  {errors.number.type === "maxLength" &&
+                    "Max length is 10 characters."}
                 </p>
               )}
               <input
                 className={inputStyles}
                 type="text"
-                placeholder="Number"
+                placeholder="Phone Number"
                 {...register("number", {
                   required: true,
                   maxLength: 10,
                 })}
               />
-              {errors.number && (
-                <p className="mt-1 text-primary-500">
-                  {errors.number.type === "required" &&
-                    "This field is required."}
-                  {errors.number.type === "maxLength" &&
-                    "Max length is 10 characters."}
+              {errors.message && (
+                <p className="text-red-500">
+                  {errors.message.type === "required" &&
+                    "Message is required."}
+                  {errors.message.type === "maxLength" &&
+                    "Max length is 2000 characters."}
                 </p>
               )}
               <textarea
@@ -126,15 +134,6 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                   maxLength: 2000,
                 })}
               />
-              {errors.message && (
-                <p className="mt-1 text-primary-500">
-                  {errors.message.type === "required" &&
-                    "This field is required."}
-                  {errors.message.type === "maxLength" &&
-                    "Max length is 2000 characters."}
-                </p>
-              )}
-
               <button
                 type="submit"
                 className="mt-5 bg-primary-500 px-20 py-3 text-white transition duration-500"

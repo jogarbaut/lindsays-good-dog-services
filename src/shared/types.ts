@@ -1,14 +1,21 @@
 export enum SelectedPage {
   Home = "home",
-  OurServices = "ourservices",
+  About = "about",
+  Services = "services",
+  Gallery = "gallery",
   Testimonials = "testimonials",
   ContactUs = "contactus",
 }
 
 export interface ServiceType {
   id: number;
-  icon: string;
   title: string;
+  description: string;
+}
+
+export interface GalleryItemType {
+  id: number;
+  imageURL: string;
   description: string;
 }
 

@@ -34,11 +34,11 @@ const Home = ({ setSelectedPage }: Props) => {
               <img
                 alt="business logo"
                 src={HomePageLogo}
-                className="mx-auto max-h-[240px] object-scale-down"
+                className="mx-auto max-h-[120px] sm:max-h-[240px] object-scale-down"
               />
             </div>
-            <p className="bold mt-8 text-lg">
-              Dog grooming, puppy classes, and training services located in
+            <p className="bold mt-8 md:text-lg text-sm text-center">
+              Grooming, puppy classes, and dog training services located in
               Pullman, Washington. The fur is flying and the tails are waging.
               Contact us today to get more information or book an appointment!
             </p>
@@ -61,9 +61,9 @@ const Home = ({ setSelectedPage }: Props) => {
             <AnchorLink
               className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
               onClick={() => setSelectedPage(SelectedPage.ContactUs)}
-              href={`#${SelectedPage.Testimonials}`}
+              href={`#${SelectedPage.Gallery}`}
             >
-              <p>Testimonials</p>
+              <p>PHOTO GALLERY</p>
             </AnchorLink>
           </motion.div>
         </div>
@@ -84,7 +84,7 @@ const Home = ({ setSelectedPage }: Props) => {
               <img
                 alt="home-page-image"
                 src={HomePageImage}
-                className="max-h-[360px] object-scale-down md:max-h-[560px]"
+                className="max-h-[300px] object-scale-down sm:max-h-[560px]"
               />
             </div>
           </div>

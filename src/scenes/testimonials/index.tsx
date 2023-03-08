@@ -39,7 +39,7 @@ const container = {
 
 const Testimonials = ({ setSelectedPage }: Props) => {
   return (
-    <section id="testimonials" className="mx-auto w-5/6 py-20">
+    <section id="testimonials" className="mx-auto w-5/6 py-24 md:py-48">
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.Testimonials)}
       >
@@ -62,7 +62,7 @@ const Testimonials = ({ setSelectedPage }: Props) => {
         </motion.div>
         {/* Testimonials */}
         <motion.div
-          className="mt-5 items-center justify-between gap-16 md:grid md:grid-cols-2"
+          className="mt-5 items-center justify-between gap-4 md:grid md:grid-cols-2"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}

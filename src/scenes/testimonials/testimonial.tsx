@@ -17,7 +17,7 @@ const Testimonial = ({ review, author }: Props) => {
       variants={childVariant}
     >
       <div className="relative">
-        <div className=" mb-10 before:absolute before:-top-10 before:-left-2.5 before:z-[5] before:rounded-md before:bg-secondary-300 before:p-1 before:content-quoteLeft after:absolute after:-bottom-10 after:-right-2.5 after:z-[5] after:rounded-md after:bg-secondary-300 after:p-1 after:content-quoteRight">
+        <div className=" mb-10 before:absolute before:-top-10 before:-left-2.5 before:z-[5] before:rounded-md before:bg-secondary-300 before:p-1 before:content-quoteLeft after:absolute after:-bottom-10 after:-right-2.5 after:z-[5] after:rounded-md after:bg-secondary-300 after:p-1 after:content-quoteRight text-sm">
           <p>{review}</p>
         </div>
       </div>
