@@ -25,11 +25,11 @@ const Navbar = ({ selectedPage, setSelectedPage, isUserTopOfPage }: Props) => {
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
 
   return (
-    <nav>
+    <nav className="max-w-7xl w-full">
       <div
         className={`${navbarBackground} fixed top-0 z-30 flex w-full items-center justify-between py-4 transition duration-500`}
       >
-        <div className="mx-auto flex w-5/6 items-center justify-between">
+        <div className="mx-auto flex w-5/6 items-center justify-between max-w-7xl">
           <div className="flex w-full items-center justify-between gap-16">
             <img alt="logo" src={Paw} className="h-6 w-6 text-white" />
             {isSmallScreenAndAbove ? (
@@ -50,11 +50,11 @@ const Navbar = ({ selectedPage, setSelectedPage, isUserTopOfPage }: Props) => {
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
                   />
-                  <Link
+                  {/* <Link
                     page="Gallery"
                     selectedPage={selectedPage}
                     setSelectedPage={setSelectedPage}
-                  />
+                  /> */}
                   <Link
                     page="Testimonials"
                     selectedPage={selectedPage}

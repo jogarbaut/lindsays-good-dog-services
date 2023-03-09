@@ -42,9 +42,9 @@ function App() {
       <Services
         setSelectedPage={setSelectedPage}
       />
-      <Gallery
+      {/* <Gallery
         setSelectedPage={setSelectedPage}
-      />
+      /> */}
       <Testimonials
         setSelectedPage={setSelectedPage}
       />

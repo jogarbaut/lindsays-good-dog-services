@@ -55,7 +55,7 @@ const container = {
 
 const Gallery = ({ setSelectedPage }: Props) => {
   return (
-    <section id="gallery" className="mx-auto w-5/6 max-w-5xl py-24 md:py-48">
+    <section id="gallery" className="mx-auto w-5/6 max-w-7xl py-24 md:py-48">
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.Services)}
       >

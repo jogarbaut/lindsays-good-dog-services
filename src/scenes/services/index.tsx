@@ -34,7 +34,7 @@ const container = {
 
 const Services = ({ setSelectedPage }: Props) => {
   return (
-    <section id="services" className="mx-auto w-5/6 py-24 md:py-48">
+    <section id="services" className="mx-auto w-5/6 py-24 md:py-48 max-w-7xl">
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.Services)}
       >
@@ -51,7 +51,7 @@ const Services = ({ setSelectedPage }: Props) => {
           }}
         >
           <div className="relative">
-            <div className="md:before:absolute md:before:-top-[80%] md:before:left-[100%] md:before:z-[-1] md:before:rotate-3 md:before:opacity-60 md:before:content-pawsSecondary">
+            <div className="md:before:absolute md:before:-top-[80%] md:before:left-[100%] md:before:z-[-1] md:before:rotate-3 md:before:opacity-60">
               <HeaderText>Services</HeaderText>
               <p className="text-md my-5 w-full text-center">
                 We offer a number of professional and caring services for our

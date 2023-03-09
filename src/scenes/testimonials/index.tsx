@@ -6,22 +6,26 @@ import Testimonial from "./testimonial";
 const testimonials: Array<TestimonialType> = [
   {
     id: 1,
-    review: "Lindsay did an awesome job on my dog despite his mats. She asked questions before she started to make sure we were on the same page. Definitely recommend!",
+    review:
+      "Lindsay did an awesome job on my dog despite his mats. She asked questions before she started to make sure we were on the same page. Definitely recommend!",
     author: "Laurie H.",
   },
   {
     id: 2,
-    review: "Lindsay is one of a kind! I enrolled my mini Aussie in her puppy class and it did wonders from him! Her trainings are super focused on how the puppy can be successful. We took the puppy 1 class twice and I do not regret it. My pup went from a little shy puppy to one who seeks attention from everyone now.  She makes her self very available for questions, which I loved because I had a lot of them!",
+    review:
+      "Lindsay is one of a kind! I enrolled my mini Aussie in her puppy class and it did wonders from him! Her trainings are super focused on how the puppy can be successful. We took the puppy 1 class twice and I do not regret it. My pup went from a little shy puppy to one who seeks attention from everyone now.  She makes her self very available for questions, which I loved because I had a lot of them!",
     author: "Gil M.",
   },
   {
     id: 3,
-    review: "Lindsay has been grooming Delilah her whole life and she just loves her. She gets so excited when I let her know we are going to go see miss Lindsay. Schnauzers are known to have issues with grooming and Lindsey handles her perfectly. Her background with schnauzers and other terriers makes for some pretty beautiful grooms. Lindsay is the best groomer.",
+    review:
+      "Lindsay has been grooming Delilah her whole life and she just loves her. She gets so excited when I let her know we are going to go see miss Lindsay. Schnauzers are known to have issues with grooming and Lindsey handles her perfectly. Her background with schnauzers and other terriers makes for some pretty beautiful grooms. Lindsay is the best groomer.",
     author: "Audrey K.",
   },
   {
     id: 4,
-    review: "Lindsay is an amazing groomer who has been grooming dogs and cats for over ten years! She is extremely compassionate with animals and they always leave her care looking amazing.",
+    review:
+      "Lindsay is an amazing groomer who has been grooming dogs and cats for over ten years! She is extremely compassionate with animals and they always leave her care looking amazing.",
     author: "Angel C.",
   },
 ];
@@ -39,7 +43,10 @@ const container = {
 
 const Testimonials = ({ setSelectedPage }: Props) => {
   return (
-    <section id="testimonials" className="mx-auto w-5/6 py-24 md:py-48">
+    <section
+      id="testimonials"
+      className="mx-auto w-5/6 max-w-7xl py-24 md:py-48"
+    >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.Testimonials)}
       >
@@ -56,8 +63,26 @@ const Testimonials = ({ setSelectedPage }: Props) => {
           }}
         >
           <HeaderText>Testimonials</HeaderText>
-          <p className="my-5 w-full text-center text-md">
-            For additional reviews, please see our Facebook Page or Google Reviews Page.
+          <p className="text-md my-5 w-full text-center">
+            For additional reviews, please see our{" "}
+            <a
+              href="https://www.facebook.com/profile.php?id=100084053287475"
+              className="text-primary-500 underline transition duration-500 visited:text-primary-500 hover:text-secondary-500"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Facebook Page
+            </a>{" "}
+            or{" "}
+            <a
+              href="https://www.google.com/search?q=lindsay%27s+good+dog+services&spell=1&sa=X&ved=2ahUKEwiRyeyy0s39AhU-ATQIHbFWDVIQBSgAegQICRAB#lrd=0x549f87057a6e65af:0xdb358e2dbd6fe522,1,,,,"
+              className="text-primary-500 underline transition duration-500 visited:text-primary-500 hover:text-secondary-500"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Google Reviews Page
+            </a>
+            .
           </p>
         </motion.div>
         {/* Testimonials */}

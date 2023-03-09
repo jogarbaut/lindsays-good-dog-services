@@ -11,7 +11,7 @@ type Props = {
 
 const Home = ({ setSelectedPage }: Props) => {
   return (
-    <section id="home" className="md:pg-6 gap-16 md:h-full md:pt-24">
+    <section id="home" className="mx-auto w-5/6 md:h-full md:pt-24 max-w-7xl">
       <motion.div
         className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6"
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
@@ -60,10 +60,10 @@ const Home = ({ setSelectedPage }: Props) => {
             </ActionButton>
             <AnchorLink
               className="text-sm font-bold text-primary-500 underline hover:text-secondary-500"
-              onClick={() => setSelectedPage(SelectedPage.ContactUs)}
-              href={`#${SelectedPage.Gallery}`}
+              onClick={() => setSelectedPage(SelectedPage.Testimonials)}
+              href={`#${SelectedPage.Testimonials}`}
             >
-              <p>PHOTO GALLERY</p>
+              <p>TESTIMONIALS</p>
             </AnchorLink>
           </motion.div>
         </div>
@@ -80,7 +80,7 @@ const Home = ({ setSelectedPage }: Props) => {
           }}
         >
           <div className="relative">
-            <div className="md:before:absolute md:before:bottom-20 md:before:left-36 md:before:z-[-1] md:before:rotate-3 md:before:scale-50 md:before:opacity-30 md:before:content-pawsGray">
+            <div className="md:before:absolute md:before:bottom-20 md:before:left-5 md:before:z-[-1] md:before:rotate-3 md:before:scale-50 md:before:opacity-30 md:before:content-pawsGray">
               <img
                 alt="home-page-image"
                 src={HomePageImage}

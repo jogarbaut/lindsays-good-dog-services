@@ -17,8 +17,8 @@ const Service = ({ title, description }: Props) => {
       className="mt-5 rounded-lg bg-white py-8 px-4 text-center shadow-lg"
       variants={childVariant}
     >
-      <div className="flex h-full w-full items-center justify-between gap-4 md:flex-col">
-        <div className="w-1/3 md:w-full">
+      <div className="flex h-full w-full items-center justify-between gap-4 p-4">
+        <div className="w-1/3 sm:w-full">
           <img
             src={Dog}
             alt={title}
@@ -30,7 +30,7 @@ const Service = ({ title, description }: Props) => {
           <h4 className="w-full whitespace-nowrap py-1 text-center text-lg font-bold text-primary-500">
             &bull; {title} &bull;
           </h4>
-          <p className="mt-3 text-left">{description}</p>
+          {/* <p className="mt-3 text-left">{description}</p> */}
         </div>
       </div>
     </motion.div>
