@@ -2,6 +2,7 @@ export enum SelectedPage {
   Home = "home",
   About = "about",
   Services = "services",
+  Training = "training",
   Gallery = "gallery",
   Testimonials = "testimonials",
   ContactUs = "contactus",
@@ -23,4 +24,11 @@ export interface TestimonialType {
   id: number;
   review: string;
   author: string;
+}
+
+export interface PhotoType {
+  id: number;
+  alt: string;
+  src: string;
+  caption?: string
 }

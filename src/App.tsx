@@ -8,6 +8,7 @@ import ContactUs from "./scenes/contactUs"
 import Footer from "./scenes/footer"
 import Gallery from "./scenes/gallery"
 import About from "./scenes/about"
+import Training from "./scenes/training"
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home)
@@ -39,6 +40,9 @@ function App() {
       <About
         setSelectedPage={setSelectedPage}
       />
+      <Training
+              setSelectedPage={setSelectedPage}
+              />
       <Services
         setSelectedPage={setSelectedPage}
       />
