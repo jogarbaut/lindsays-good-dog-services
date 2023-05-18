@@ -30,12 +30,11 @@ export interface PhotoType {
   id: number;
   alt: string;
   src: string;
-  caption?: string
 }
 
 export interface StaffType {
   id: number;
-  photo?: string;
+  photo: string;
   name: string;
   role: string;
   background: string;

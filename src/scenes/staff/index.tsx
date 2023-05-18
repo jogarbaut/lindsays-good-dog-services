@@ -9,21 +9,21 @@ const staff: Array<StaffType> = [
     name: "Lindsay",
     role: "Owner, Groomer, Trainer",
     background: "To be filled in",
-    photo: "https://res.cloudinary.com/dgulbxrz1/image/upload/v1676840409/lindsays-good-dog-services/HomePageImage_dqervg.jpg"
+    photo: "https://res.cloudinary.com/dgulbxrz1/image/upload/v1684416667/lindsays-good-dog-services/profile-pic_auh8bn.png"
   },
   {
     id: 2,
     name: "Walt",
     role: "Trainer, Head of Maintenance, Bather",
     background: "To be filled in",
-    photo: "https://res.cloudinary.com/dgulbxrz1/image/upload/v1676840409/lindsays-good-dog-services/HomePageImage_dqervg.jpg"
+    photo: "https://res.cloudinary.com/dgulbxrz1/image/upload/v1684416667/lindsays-good-dog-services/profile-pic_auh8bn.png"
   },
   {
     id: 3,
     name: "Samantha",
     role: "Office Manager, Bather",
     background: "To be filled in",
-    photo: "https://res.cloudinary.com/dgulbxrz1/image/upload/v1676840409/lindsays-good-dog-services/HomePageImage_dqervg.jpg"
+    photo: "https://res.cloudinary.com/dgulbxrz1/image/upload/v1684416667/lindsays-good-dog-services/profile-pic_auh8bn.png"
   },
 ]
 
@@ -58,7 +58,7 @@ const Staff = ({ setSelectedPage }: Props) => {
         </motion.div>
         {/* Staff */}
         <motion.div
-          className="mt-5 items-start justify-between gap-4 grid md:grid-cols-3"
+          className="mt-5 items-start justify-between gap-4 grid grid-cols-1 w-1/2 md:grid-cols-3 md:w-full mx-auto"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -70,6 +70,7 @@ const Staff = ({ setSelectedPage }: Props) => {
               name={staff.name}
               role={staff.role}
               background={staff.background}
+              photo={staff.photo}
             />
           ))}
         </motion.div>

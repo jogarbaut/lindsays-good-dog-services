@@ -97,9 +97,8 @@ const Grooming = ({ setSelectedPage }: Props) => {
           className="grid grid-cols-2 gap-4 md:grid-cols-3"
         >
           {photos.map((photo: PhotoType) => (
-            <motion.div className="" variants={childVariant}>
+            <motion.div variants={childVariant} key={photo.id}>
               <img
-                key={photo.id}
                 src={photo.src}
                 alt={photo.alt}
                 className="w-full"
