@@ -24,22 +24,22 @@ const Slider = ({ items }: Props) => {
   return (
     <div className="relative grid h-full w-full content-center">
       <div
-        className="duartion-300 absolute top-1/2 left-0 cursor-pointer rounded bg-primary-500/30 p-2 text-2xl text-white hover:bg-primary-500 hover:duration-300"
+        className="duartion-300 absolute top-1/2 left-0 cursor-pointer rounded bg-primary-500/50 p-2 text-2xl text-white hover:bg-primary-500 hover:duration-300"
         onClick={handlePreviousArrowClick}
       >
-        <ChevronLeftIcon className="h-4 w-4 md:h-8 md:w-8" />
+        <ChevronLeftIcon className="h-3 w-3 md:h-5 md:w-5" />
       </div>
       <div
-        className="absolute top-1/2 right-0 cursor-pointer rounded bg-primary-500/30 p-2 text-2xl text-white duration-300 hover:bg-primary-500 hover:duration-300"
+        className="absolute top-1/2 right-0 cursor-pointer rounded bg-primary-500/50 p-2 text-2xl text-white duration-300 hover:bg-primary-500 hover:duration-300"
         onClick={handleNextArrowClick}
       >
-        <ChevronRightIcon className="h-4 w-4 md:h-8 md:w-8" />
+        <ChevronRightIcon className="h-3 w-3 md:h-5 md:w-5" />
       </div>
-      <div className="h-full w-5/6 md:w-full mx-auto duration-500">
+      <div className="h-full md:w-10/12 mx-auto duration-500">
         <img
           src={items[currentIndex].src}
           alt={items[currentIndex].alt}
-          className="mx-auto w-full max-w-[500px] rounded-lg object-contain"
+          className="mx-auto w-full max-w-[500px] object-contain"
         />
       </div>
     </div>

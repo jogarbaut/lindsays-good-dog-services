@@ -1,23 +1,55 @@
 import ActionButton from "@/shared/ActionButton";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { motion } from "framer-motion";
-import { SelectedPage } from "@/shared/types";
+import { SelectedPage, PhotoType } from "@/shared/types";
 import HomePageLogo from "@/assets/HomePageLogo.jpeg";
 import HomePageImage from "@/assets/HomePageImage.png";
+import Slider from "@/shared/Slider";
+import HeaderText from "@/shared/HeaderText";
+import HeaderTextAlt from "@/shared/HeaderTextAlt";
+HeaderText
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
+const photos: Array<PhotoType> = [
+  {
+    id: 1,
+    alt: "Business Sign",
+    src: "https://res.cloudinary.com/dgulbxrz1/image/upload/v1678399575/lindsays-good-dog-services/LGDS-Facility-Front_lltpzy.jpg",
+  },
+  {
+    id: 2,
+    alt: "Puppy Social Class",
+    src: "https://res.cloudinary.com/dgulbxrz1/image/upload/v1684390163/lindsays-good-dog-services/Featured/featured-2_bke971.png",
+  },
+  {
+    id: 3,
+    alt: "Grooming",
+    src: "https://res.cloudinary.com/dgulbxrz1/image/upload/v1684390161/lindsays-good-dog-services/Featured/featured-3_uxedja.png",
+  },
+  {
+    id: 4,
+    alt: "Puppy Social Class",
+    src: "https://res.cloudinary.com/dgulbxrz1/image/upload/v1684390161/lindsays-good-dog-services/Featured/featured-4_otnrea.png",
+  },
+  {
+    id: 5,
+    alt: "Lindsay Presenting",
+    src: "https://res.cloudinary.com/dgulbxrz1/image/upload/v1684390159/lindsays-good-dog-services/Featured/featured-5_sj2gpy.png",
+  },
+];
+
 const Home = ({ setSelectedPage }: Props) => {
   return (
-    <section id="home" className="mx-auto w-5/6 md:h-full md:pt-24 max-w-7xl">
+    <section id="home" className="mx-auto w-full max-w-7xl md:h-full md:pt-24">
       <motion.div
-        className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6"
+        className="mx-auto w-5/6 flex flex-col items-center justify-center md:flex-row gap-16 md:gap-8"
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >
         {/* Main Header */}
-        <div className="z-10 mt-32 md:basis-3/5">
+        <div className="z-10 mt-32 md:basis-1/2">
           {/* Headings */}
           <motion.div
             className="md:-mt-20"
@@ -34,10 +66,10 @@ const Home = ({ setSelectedPage }: Props) => {
               <img
                 alt="business logo"
                 src={HomePageLogo}
-                className="mx-auto max-h-[120px] sm:max-h-[240px] object-scale-down"
+                className="mx-auto max-h-[120px] object-scale-down sm:max-h-[240px]"
               />
             </div>
-            <p className="bold mt-8 md:text-lg text-sm text-center">
+            <p className="bold mt-8 text-center text-sm md:text-lg">
               Grooming, puppy classes, and dog training services located in
               Pullman, Washington. The fur is flying and the tails are waging.
               Contact us today to get more information or book an appointment!
@@ -69,7 +101,7 @@ const Home = ({ setSelectedPage }: Props) => {
         </div>
 
         <motion.div
-          className="flex basis-3/5 justify-center md:z-10 md:justify-items-end"
+          className="flex md:basis-1/2 justify-center"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -79,15 +111,11 @@ const Home = ({ setSelectedPage }: Props) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <div className="relative">
-            <div className="md:before:absolute md:before:bottom-20 md:before:left-5 md:before:z-[-1] md:before:rotate-3 md:before:scale-50 md:before:opacity-30 md:before:content-pawsGray">
-              <img
-                alt="home-page-image"
-                src={HomePageImage}
-                className="max-h-[300px] object-scale-down sm:max-h-[560px]"
-              />
-            </div>
+          <div className="">
+          <HeaderTextAlt>Featured Photos</HeaderTextAlt>
+          <Slider items={photos} />
           </div>
+
         </motion.div>
       </motion.div>
     </section>

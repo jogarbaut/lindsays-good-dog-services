@@ -1,9 +1,9 @@
 export enum SelectedPage {
   Home = "home",
   About = "about",
-  Services = "services",
-  Training = "training",
-  Gallery = "gallery",
+  Staff = "staff",
+  Grooming = "grooming",
+  Training = "classes&training",
   Testimonials = "testimonials",
   ContactUs = "contactus",
 }
@@ -31,4 +31,12 @@ export interface PhotoType {
   alt: string;
   src: string;
   caption?: string
+}
+
+export interface StaffType {
+  id: number;
+  photo?: string;
+  name: string;
+  role: string;
+  background: string;
 }

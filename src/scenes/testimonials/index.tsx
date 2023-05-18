@@ -45,7 +45,7 @@ const Testimonials = ({ setSelectedPage }: Props) => {
   return (
     <section
       id="testimonials"
-      className="mx-auto w-5/6 max-w-7xl py-24 md:py-48"
+      className="mx-auto w-5/6 max-w-7xl py-16"
     >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.Testimonials)}
